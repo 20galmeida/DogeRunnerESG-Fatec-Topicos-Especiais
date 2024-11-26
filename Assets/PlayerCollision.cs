@@ -2,21 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCollision : MonoBehaviour {
+public class PlayerCollision : MonoBehaviour
+{
 
-	private void Start() {
-		GameManager.Instance.onPlay.AddListener(ActivatePlayer);
-	}
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip collisionSfx;
 
-	private void ActivatePlayer() {
-		gameObject.SetActive(true);
-	}
-    
-	private void OnCollisionEnter2D(Collision2D other) {
-		if (other.transform.tag == "Obstacle") {
-			gameObject.SetActive(false);
-			GameManager.Instance.GameOver();
-		}
-	}
+    private void Start()
+    {
+        GameManager.Instance.onPlay.AddListener(ActivatePlayer);
+    }
+
+    private void ActivatePlayer()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("Obstacle"))
+        {
+            StartCoroutine(HandleCollision());
+        }
+    }
+
+    private IEnumerator HandleCollision()
+    {
+        src.PlayOneShot(collisionSfx, 0.5f);
+
+        yield return new WaitForSeconds(collisionSfx.length);
+
+        gameObject.SetActive(false);
+        GameManager.Instance.GameOver();
+    }
 
 }

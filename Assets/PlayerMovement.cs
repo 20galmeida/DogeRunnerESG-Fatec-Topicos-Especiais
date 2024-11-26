@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float defaultHeight = 0.5f;
     [SerializeField] private float crouchHeight = 0.5f;
 
-    public AudioSource src;
-    public AudioClip jumpSfx, crouchSfx;
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip crouchSfx, jumpSfx;
 
     private bool isGrounded = false;
     private bool isJumping = false;
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
             rb.velocity = Vector2.up * jumpForce;
-            src.PlayOneShot(jumpSfx, 0.3f);
+            src.PlayOneShot(jumpSfx, 0.3f); // Play jump sound at 50% volume
         }
 
         if (isJumping && Input.GetButton("Jump"))
@@ -56,6 +56,12 @@ public class PlayerMovement : MonoBehaviour
         #endregion
 
         #region CROUCHING
+
+        if (isGrounded && Input.GetButtonDown("Crouch"))
+        {
+            GFX.localScale = new Vector3(GFX.localScale.x, crouchHeight, GFX.localScale.z);
+            src.PlayOneShot(crouchSfx, 0.5f);
+        }
 
         if (isGrounded && Input.GetButton("Crouch"))
         {
