@@ -72,18 +72,6 @@
 - **Barra de Progressão:** Indicador visual da velocidade atual dos obstáculos.
 - **Prêmios:** A sensação de realização ao bater seus recordes anteriores.
 
-## Capturas de Tela
-
-![Gameplay Screenshot](path/to/screenshot1.png)
-![Menu Principal](path/to/screenshot2.png)
-
-## Tecnologias Utilizadas
-
-- **Motor de Jogo:** [Nome do Motor de Jogo, ex.: Unity, Godot]
-- **Linguagem de Programação:** [Linguagem utilizada, ex.: C#, GDScript]
-- **Gráficos:** [Ferramentas de criação gráfica, ex.: Adobe Photoshop, Illustrator]
-- **Controle de Versão:** GitHub
-
 ## Como Jogar
 
 1. **Inicie o Jogo:** Abra o executável ou inicie através do motor de jogo.
@@ -93,20 +81,6 @@
 3. **Evite Obstáculos:** Mantenha Doge em movimento, evitando fumaça de poluição, bananas descascadas e pilhas de lixo.
 4. **Acumule Pontos:** Sobreviva o maior tempo possível para alcançar a maior pontuação.
 5. **Verifique o Ranking:** Veja suas melhores pontuações no ranking local.
-
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorias, correções de bugs ou novas funcionalidades.
-
-## Licença
-
-Este projeto está licenciado sob a [Nome da Licença, ex.: MIT License](LICENSE).
-
-## Contato
-
-- **Desenvolvedor:** [Seu Nome]
-- **Email:** [seuemail@example.com]
-- **Redes Sociais:** [Links para suas redes sociais, se aplicável]
 
 ## Agradecimentos
 
