@@ -4,6 +4,8 @@
 
 **Doge Runner ESG** é um jogo de corrida infinita em 2D onde o objetivo principal é ajudar Doge a escapar da poluição ambiental. O jogador deve controlar Doge, evitando obstáculos e sobrevivendo o maior tempo possível para acumular pontos. Com o passar do tempo, a velocidade dos obstáculos aumenta, tornando o jogo mais desafiador conforme a pontuação do jogador cresce.
 
+[**Clique aqui para fazer o download do jogo**](https://drive.usercontent.google.com/download?id=16wA93r3Zzzs2ruWCWjNxyozJ4rN0gcyG&export=download&authuser=0)
+
 ## Aspectos de Jogabilidade
 
 ### Jogadores
